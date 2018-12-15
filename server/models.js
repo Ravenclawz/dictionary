@@ -7,7 +7,7 @@ const entriesSchema = new Schema({
   upVotes: Number,
   downVotes: Number,
   createdBy: String,
-  tags: [String]
+  id: Number
 })
 const userSchema = new Schema({
   userName: String,
@@ -18,30 +18,30 @@ const userSchema = new Schema({
 
 const Users = mongoose.model('Users', userSchema);
 const Entries = mongoose.model('Entries', entriesSchema);
-let newUser = {
-  userName: "Eugene",
-  password: "kittens88",
-  entries: "yada, yada, yoo",
-  badEntries: 44
-}
-let newEntry = {
-  term: "hi",
-  definition: "hi",
-  upVotes: 10,
-  downVotes: 1,
-  createdBy: "hi",
-  tags: ["hi"]
-}
+// let newUser = {
+//   userName: "Eugene",
+//   password: "kittens88",
+//   entries: "yada, yada, yoo",
+//   badEntries: 44
+// }
+// let newEntry = {
+//   term: "hi",
+//   definition: "hi",
+//   upVotes: 10,
+//   downVotes: 1,
+//   createdBy: "hi",
+//   tags: ["hi"]
+// }
 
-let entryDoc = new Entries(newEntry);
-let userDoc = new Users(newUser);
-entryDoc.save((err) => {
-  if (err) return handleError(err)
-
-})
-userDoc.save((err) => {
-  if (err) return handleError(err);
-});
+// let entryDoc = new Entries(newEntry);
+// let userDoc = new Users(newUser);
+// entryDoc.save((err) => {
+//   if (err) return handleError(err)
+//
+// })
+// userDoc.save((err) => {
+//   if (err) return handleError(err);
+// });
 
 
 

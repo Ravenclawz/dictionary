@@ -80,7 +80,7 @@ class PageContent extends Component {
     })
   }
   componentDidMount() {
-    fetch()
+    // fetch()
   }
   // componentWillMount() {
   //   fetch("/http://localhost:8080/search")
